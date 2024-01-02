@@ -1,0 +1,47 @@
+Protokol Komunikasi
+Hanif Muhamad Assegaf / 16523088
+
+
+Pengertian Protokol Komunikasi
+Protokol komunikasi dalam jaringan merupakan serangkaian aturan dan prosedur yang digunakan untuk mengatur pertukaran data dan jaringan berkomunikasi antar komputer atau perangkat. Protokol ini memiliki peran yang penting yaitu berperan untuk memastikan bahwa data yang dikirimkan dari satu perangkat ke perangkat lainnya dapat diterima dengan benar dan tidak terjadi kegagalan dalam proses pertukaran data.
+
+Dalam konteks protokol komunikasi, arah transmisi mengacu pada cara data dikirim antara perangkat pengirim dan perangkat penerima. Ada tiga jenis utama arah transmisi: simplex, half-duplex, dan full-duplex.
+1. Simplex
+Dalam mode simpleks, komunikasi hanya dilakukan satu arah. Satu perangkat bertindak sebagai pemancar dan perangkat lainnya bertindak sebagai penerima.
+Contoh: Radio AM atau FM tradisional adalah contoh umum  mode simplex. Stasiun radio mengirimkan sinyal ke radio penerima, tetapi radio penerima tidak mengirimkan informasi kembali.
+2. Half-duplex
+Mode half-duplex memungkinkan komunikasi dua arah, namun tidak secara bersamaan. Artinya suatu perangkat dapat bertindak sebagai pemancar dan penerima, namun tidak keduanya sekaligus.
+Contoh: Sistem transceiver  adalah contoh  mode setengah dupleks. Kapan saja, satu pihak dapat berbicara dan pihak lainnya dapat mendengarkan. Setelah pihak tersebut selesai berbicara, kedua pihak dapat bertukar peran.
+3. Full Duplex
+Mode full duplex memungkinkan komunikasi dua arah secara simultan. Perangkat pengirim dan penerima dapat beroperasi secara bersamaan, sehingga data mengalir dalam arah yang berlawanan.
+Contoh: Telepon biasa adalah contoh umum  mode dupleks penuh. Baik penelepon maupun penerima dapat berbicara pada saat yang sama tanpa harus menunggu giliran. Jaringan komputer modern, seperti Ethernet dalam mode dupleks penuh, juga memungkinkan data dikirim dan diterima pada saat yang bersamaan.
+
+Protokol komunikasi dalam robotika mengacu pada aturan atau aturan yang diikuti oleh perangkat keras dan perangkat lunak yang terlibat dalam pertukaran informasi antar komponen robot. Beberapa protokol komunikasi yang umumnya digunakan dalam robotika adalah sebagai berikut.
+1. UART (Universal Asynchronous Receiver/Transmitter)
+UART adalah protokol komunikasi serial yang menggunakan dua kabel(TX - transmit, RX - receive) untuk mengirim dan menerima data secara asinkron antar perangkat. Biasanya digunakan untuk komunikasi antara mikrokontroler dan sensor/aktuator seperti motor, encoder, dan modul komunikasi lainnya.
+Keunggulan: Sederhana, dapat digunakan dalam jarak dekat.
+Keterbatasan: Kecepatan transfer data lebih lambat dibandingkan  protokol lain.
+2. I2C (Inter-Integrated Circuit)
+I2C adalah protokol komunikasi serial yang memungkinkan banyak perangkat dihubungkan ke satu bus. Setiap perangkat memiliki alamat unik untuk identifikasi. Digunakan untuk komunikasi antara mikrokontroler dan sensor atau aktuator.
+Keunggulan : Anda dapat menghubungkan beberapa perangkat melalui  dua kabel (SDA – Data, SCL – clock).
+Keterbatasan: memiliki jarak transmisi terbatas dan lebih kompleks dibandingkan UART.
+3. SPI (Serial Peripheral Interface)
+SPI merupakan protokol komunikasi serial yang menggunakan 3 atau 4 kabel (MOSI - Master Out Slave In, MISO - Master In Slave Out, SCLK - Serial Clock, SS - Slave Select) untuk mentransfer data antar perangkat.
+Keunggulan :  dapat digunakan untuk koneksi berkecepatan tinggi, jarak pendek hingga menengah.
+Keterbatasan: Memerlukan lebih banyak kabel dibandingkan dengan  UART atau I2C.
+4. CAN (Controller Area Network)
+CAN adalah protokol komunikasi yang dikembangkan untuk mobil, tetapi kemudian diadaptasi menjadi robotika. CAN Menggunakan kabel twisted pair untuk keamanan tinggi.
+Keuntungan: Stabilitas tinggi dan ketahanan terhadap interferensi elektromagnetik.
+Keterbatasan: Membutuhkan perangkat keras khusus (pengontrol CAN) dan biaya implementasinya mungkin mahal.
+5. Ethernet
+Ethernet adalah protokol komunikasi yang banyak digunakan dalam jaringan komputer. Dalam robotika, digunakan untuk menghubungkan robot ke jaringan lokal atau Internet.
+Keuntungan :  dapat digunakan untuk koneksi jarak jauh berkecepatan tinggi.
+Keterbatasan: Persyaratan bandwidth  lebih tinggi.
+6. ROS (Sistem Operasi Robot) Protokol Komunikasi
+ROS mendukung sejumlah protokol, termasuk ROS Topic (publish-subscribe model), ROS Service (Panggilan Layanan), dan ROS Action (Tindakan Kompleks). ROS memfasilitasi komunikasi antar modul robot.
+Keuntungan: fleksibel dan mendukung modularitas dan interoperabilitas.
+Keterbatasan: Membutuhkan pemahaman yang baik tentang struktur ROS.
+7. MQTT (Message Queuing Telemetry Transport)
+MQTT adalah protokol komunikasi berorientasi pesan ringan yang biasa digunakan di IoT. Hal ini dapat diimplementasikan dalam robotika untuk pertukaran data antar perangkat.
+Keuntungan: efisien dan mendukung model terbitkan/berlangganan.
+Keterbatasan: Mungkin terlalu rumit untuk beberapa aplikasi sederhana.
